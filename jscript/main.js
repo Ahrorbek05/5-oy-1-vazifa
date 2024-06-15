@@ -127,19 +127,19 @@
 // console.log(olibTashlash("       salom        "));
 
 // 6.
-// function words(str) {
-//     return str.filter(string => string.length >= 5).map(string => string.charAt(0).toUpperCase() + string.slice(1));
-// }
-// const str = ['hello world', 'bye', 'dreams', 'bye'];
-// const result = words(str);
-// console.log(result);
+// let arr = ['apple', 'bye', 'guys', 'hello', 'world'];
+// function strArray(arr) {
+//     let res = arr.filter(function (value) {
+//         return value.length >= 5
+//     })
+//     res = res.map(function (value) {
+//         value = value.replace(value[0], value[0].toUpperCase())
+//         return value;
+//     })
 
-// function words(str) {
-//     return str.filter(b => b.length >= 5).map(b => b.charAt(0).toUpperCase() + b.slice(1));
+//     return res
 // }
-// const res = ['dreams', 'bye', 'hello world'];
-// const result = words(res);
-// console.log(result); 
+// console.log(strArray(arr));
 
 // 7.
 // const talabalar = [
@@ -149,27 +149,27 @@
 //     { name: "Abduraxmon", age: 24 }
 // ];
 
-// function yigirma(talabalar) {
-//     const student = talabalar.find(student => student.age > 20);
-//     if (student) {
-//         return student.name.toUpperCase();
+// const findStudents = (arr) => {
+//     let result = arr.find(function (value) {
+//         return value.age > 20
+//     })
+//     if(result){
+//         return result.name.toUpperCase();
 //     } else {
-//         return "Talaba topilmadi";
+//         return 'Yoshi 20 dan katta talaba mavjud emas'
 //     }
 // }
-// const res = yigirma(talabalar);
-// console.log(res);
+// console.log(findStudents(talabalar));
 
 // 8.
-// const narxlar = [50, 200, 150, 30, 400, 75, 125];
-// function mahsulotNarxi(Narxlar) {
-//     const narxlari = Narxlar.filter(narx => narx > 100);
-//     const umumiy = narxlari.reduce((sum, narx) => sum + narx, 0);
-    
-//     return umumiy;
-// }
-// const summa = mahsulotNarxi(narxlar);
-// console.log(summa);
+// let prices = [10, 120, 200, 100, 50];
+// let sum = 0;
+// prices.forEach(el => {
+//     if ( el > 100){
+//         sum += el
+//     }
+// })
+// console.log(sum);
 
 // 9.
 // const num = [10, 101, 50, 51, 60];
@@ -202,17 +202,35 @@
 // hisoblaymiz(kvadrat);
 
 // 11.
-// let hodimlarMaoshi = [1800, 2000, 1900, 2200, 2100, 1990];
-// let sum = 0;
-// function maosh(hodim) {
-//     let a = hodim.filter(m < 2000)
-//         let b = a.map(sum => sum * 1.1);
-//         let c = b.reduce((sum, el) => sum + el, 0);
-//         return sum
+// let arr = [ 1200, 2200, 5000, 3000, 900, 1500];
+// function salary(arr) {
+//     let res = arr.map(function (value) {
+//         if( value >= 2000){
+//             value = Math.floor(value * 1.1)
+//         }
+//         return value
+//     })
+//     return res;
 // }
-// let res = maosh(hodimlarMaoshi);
-// console.log(res);
-// ishlolmadim
+// console.log(salary(arr));
 
 // 12.
+// let student = [
+//     {name: 'Ahmadjon', age: 18, ball: 85 },
+//     {name: 'Abdumajid', age: 21, ball: 80 },
+//     {name: 'Ozodbek', age: 22, ball: 75 },
+//     {name: 'Javohir', age: 15, ball: 65 },
+// ];
 
+// function studentFind(arr) {
+//     let res = arr.map(function (value) {
+//         return value.ball >= 80
+//     })
+//     let succsess = arr.filter(function (value) {
+//         return value.ball >= 80 
+//     })
+
+//     console.log(succsess);
+//     return [res.name, res.age]
+// }
+// console.log(studentFind(student));
